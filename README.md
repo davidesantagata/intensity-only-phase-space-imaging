@@ -116,8 +116,8 @@ D. Santagata, G. Gradoni, and S. Solimene,
 Associated scientific work:
 
 **Davide Santagata**  
-**Giuseppe Gradoni**  
-**Salvatore Solimene**
+**Prof. Gabriele Gradoni**  
+**Prof. Raffaele Solimene**
 
 Code implementation:
 
