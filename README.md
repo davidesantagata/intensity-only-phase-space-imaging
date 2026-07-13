@@ -105,7 +105,7 @@ The following performance metrics are evaluated:
 If you use this code, please cite:
 
 ```
-D. Santagata, G. Gradoni, and S. Solimene,
+D. Santagata, G. Gradoni, and R. Solimene,
 "Single-Frequency Intensity-Only Target Localization using Phase-Space Deconvolution."
 ```
 
