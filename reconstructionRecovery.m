@@ -63,10 +63,10 @@ if noiseChoice
     Measure = awgn(Output, SNRdB, 'measured');
 
     SNR_eff = snr(Output, Measure - Output);
-    fprintf('SNR effettivo = %.2f dB\n', SNR_eff);
+    fprintf('SNR = %.2f dB\n', SNR_eff);
 else
     Measure = Output;
-    fprintf('Rumore disattivato (SNR = ∞) %.2f\n');
+    fprintf('no noise (SNR = ∞) %.2f\n');
 end
 
 Mark = abs(Measure).^2; % Mark's Spectrum
@@ -90,7 +90,7 @@ gamma = 3;
 R = windowingInversion(sigma2, gamma, Marginal_x, x, L, N);
 
 
-%% Normalizzazione
+%% Normalization
 R_norm  = abs(R)  / max(abs(R));
 
 object = R_norm;
