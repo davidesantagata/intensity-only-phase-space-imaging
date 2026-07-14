@@ -1,18 +1,16 @@
 function [Y] = fourierTransform(x, y, k0, pmax, M)
     
-    % Determinare la lunghezza del segnale
     N = size(y, 1);
  
-    % Creazione dell'asse della frequenza spaziale
-    p = linspace(-pmax, pmax, M);  % Campionamento delle frequenze spaziali
+    % frequency axis
+    p = linspace(-pmax, pmax, M);
 
-    %dp = 2 * pmax / (M - 1);          % Passo di campionamento in p
-    dx = x(2)-x(1);                    % Passo di campionamento in x (spazio o tempo)
+    dx = x(2)-x(1);                    % sampling step
 
-    % Costruzione della matrice esponenziale per la trasformata
+    % Fourier operator
     E = exp(1i*k0*p(:)*x);
 
-    % Calcolo della trasformata di Fourier
+    % Fourier transform
     Y = E * y * dx; 
 
 end
