@@ -12,19 +12,17 @@ x = zeros(1,N);
 for i = 1:N
     while true
 
-        % Estrazione uniforme
-        candidato = -L/2 + L*rand;
+        candidate = -L/2 + L*rand;
 
-        % Accetta se sufficientemente distante
-        if i == 1 || all(abs(candidato - x(1:i-1)) >= DX)
-            x(i) = candidato;
+        % it is accepted if sufficiently distant
+        if i == 1 || all(abs(candidate - x(1:i-1)) >= DX)
+            x(i) = candidate;
             break;
         end
 
     end
 end
 
-% Se serve averli ordinati
 x = sort(x);
 
 end
