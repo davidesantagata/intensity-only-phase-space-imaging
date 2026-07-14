@@ -1,6 +1,6 @@
 function [x, object] = reconstructionRecovery(xPosInput, f0, L, do, N)
 
-%% ===============================================
+%% ==============================================
 %             PARAMETER INITIALIZATION
 % ===============================================
 
