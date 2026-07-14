@@ -43,11 +43,12 @@ Gnm(Rnm==0)=G_diag(Rnm==0);
 % INCIDENT FIELD
 % ==============================
 
-Ns = length(x);       % numero posizioni di scansione
+Ns = length(x);       % number of scan positions
 E = zeros(Ntheta,Ns,'single');
 
 % random phase
-% phi = -pi + 2*pi*rand(1,length(x));
+% phi = -pi + 2*pi*rand(1,length(x)); % uncomment this if you want to use
+% it
 
 phi = 0; % constant phase is selected.
 
@@ -67,14 +68,14 @@ for is = 1:Ns
     xs = x(is);
 
     % ------------------------------
-    % Campo incidente per xs
+    % Incident Field per xs
     % ------------------------------
 
     Einc = interp1(x, einc, xPos-xs, 'linear',0).';
 
 
     % ------------------------------
-    % Campo totale (Foldy-Lax)
+    % Total Field (Foldy-Lax)
     % ------------------------------
 
     if strcmp(mode,'full')
@@ -89,7 +90,7 @@ for is = 1:Ns
 
 
     % ------------------------------
-    % Operatore esterno mobile
+    % External Operator for the Acquisition along the Curve
     % ------------------------------
 
     [Theta,Xp] = ndgrid(theta,xPos);
@@ -102,7 +103,7 @@ for is = 1:Ns
 
 
     % ------------------------------
-    % Campo uscente
+    % Scattered Field
     % ------------------------------
 
     E(:,is)=Ae*(Etot.*tau(:));
